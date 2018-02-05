@@ -90,7 +90,7 @@ train_generator = datagen.flow_from_directory(
     x_train,
     target_size=(img_width, img_height),
     batch_size=batch_size,
-    #class_mode='categorical'
+    class_mode='categorical'
 )
 
 test_generator = datagenTest.flow_from_directory(
