@@ -123,8 +123,8 @@ model.compile(optimizer=opt_sgd, loss='mean_squared_error', metrics=['accuracy']
 # Callbacks
 checkpointer = ModelCheckpoint(filepath=checkpoint_path, monitor='val_loss', verbose=1, save_best_only=False, save_weights_only=True, mode='auto', period=1)
 logging_callback = LambdaCallback(on_epoch_end=lambda epoch, logs: print('epoch: {}    loss:{}    acc:{}'.format(epoch, logs['loss'], logs['acc'])))
-csv_logger = CSVLogger('training_ramon_final.log')
-tbCallBack = TensorBoard(log_dir='./tensorboard_ramon_final', histogram_freq=0, batch_size=32, write_graph=True, write_grads=False, write_images=False, embeddings_freq=0, embeddings_layer_names=None, embeddings_metadata=None)
+csv_logger = CSVLogger('training_final.log')
+tbCallBack = TensorBoard(log_dir='./tensorboard_final', histogram_freq=0, batch_size=32, write_graph=True, write_grads=False, write_images=False, embeddings_freq=0, embeddings_layer_names=None, embeddings_metadata=None)
 
 #print("Trainning")
 # Se necessario treinar primeiro as ultimas camadas
