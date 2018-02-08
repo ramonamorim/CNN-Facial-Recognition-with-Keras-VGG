@@ -78,9 +78,7 @@ def upload_file():
             print(r.text)
 
             del model
-
-
-            # for browser, add 'redirect' function on top of 'url_for'
+            
             return 'sucesso!'
 
 def allowed_file(filename):
